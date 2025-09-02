@@ -1,0 +1,75 @@
+<% layout('/layouts/boilerplate')%>
+    <h2>Add Listing</h2>
+    <div class="row">
+        <div class="col-7 offset-2">
+            <form action="/listing" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+
+
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input name="listing[title]" placeholder="Enter title" type="text" class="form-control" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Tittle must be required
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="listing[description]" placeholder="description" type="text" class="form-control"
+                        required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Description must be required
+                    </div>
+                </div>
+                <!-- <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input name="listing[image.url]" placeholder="image link/url" type="text" class="form-control">
+                </div> -->
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Listing Image</label>
+                    <input name="listing[image.url]" type="file" class="form-control" required>
+                    
+                </div>
+
+                <div class="row">
+
+                    <div class="mb-3 col-4">
+                        <label for="price" class="form-label">price</label>
+                        <input name="listing[price]" placeholder="price" class="form-control" required>
+                    </div>
+                    <div class="mb-3 col-8">
+                        <label for="country">Country</label>
+                        <input name="listing[country]" placeholder="country" type="text" class="form-control" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Country must be required
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input name="listing[location]" placeholder="location" type="text" class="form-control" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Location must be required
+                    </div>
+                </div>
+
+
+
+                <button class="btn-add">post</button>
+
+            </form>
+        </div>
+    </div>
